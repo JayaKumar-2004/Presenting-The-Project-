@@ -28,44 +28,44 @@
         page-break-after: always;
     }
 
-    /* Thick border as seen in the new screenshots */
+    /* Thick border with balanced internal spacing */
     .border-box {
         border: 8px solid #000; 
         width: 100%;
         height: 100%;
-        padding: 30px 20px;
+        padding: 20px 20px;
         text-align: center;
         display: flex;
         flex-direction: column;
-        justify-content: space-between;
+        /* space-around fixes the massive gaps by distributing space evenly */
+        justify-content: space-around; 
     }
 
-    /* Base Typography */
+    /* Base Typography (Increased slightly to fill the page better) */
     .text-black { color: #000; }
-    .text-xs { font-size: 10px; line-height: 1.4; }
-    .text-sm { font-size: 13px; line-height: 1.4; margin-bottom: 2px; }
-    .text-md { font-size: 15px; margin-bottom: 4px; }
-    .text-lg { font-size: 16px; margin-bottom: 8px; }
-    .text-xl { font-size: 24px; margin: 5px 0 10px 0; letter-spacing: 0.5px; }
+    .text-xs { font-size: 11px; line-height: 1.4; }
+    .text-sm { font-size: 14px; line-height: 1.4; margin-bottom: 3px; }
+    .text-md { font-size: 16px; margin-bottom: 4px; }
+    .text-lg { font-size: 18px; margin-bottom: 5px; }
+    .text-xl { font-size: 26px; margin: 5px 0 10px 0; letter-spacing: 0.5px; }
 
     .bold { font-weight: bold; }
     .italic { font-style: italic; }
     .uppercase { text-transform: uppercase; }
 
     /* Custom Elements */
-    .student-list { margin: 8px 0; line-height: 1.5; }
-    .student-list p { font-size: 13px; font-weight: bold; margin-bottom: 2px; }
+    .student-list { margin: 5px 0; line-height: 1.5; }
+    .student-list p { font-size: 14px; font-weight: bold; margin-bottom: 2px; }
     
-    .logo-mid { width: 90px; height: auto; margin: 10px auto; display: block; }
-    .logo-bottom { width: 50px; height: auto; margin: 5px auto 10px auto; display: block; }
+    .logo-mid { width: 100px; height: auto; margin: 5px auto; display: block; }
+    .logo-bottom { width: 60px; height: auto; margin: 0 auto 5px auto; display: block; }
 
     /* --- SILVER PAGE OVERRIDES --- */
-    /* Light silver/gray to match the first image */
-    .silver-page { color: #c0c0c0; } 
-    .silver-page .border-box { border-color: #d0d0d0; }
-    .silver-page .text-black { color: #c0c0c0; }
+    .silver-page { color: #a0a0a0; } 
+    .silver-page .border-box { border-color: #a0a0a0; }
+    .silver-page .text-black { color: #a0a0a0; }
     .silver-page img {
-        filter: grayscale(100%) opacity(40%) brightness(120%);
+        filter: grayscale(100%) opacity(50%) brightness(110%);
     }
 
     /* --- PRINT FIXES --- */
@@ -84,15 +84,18 @@
 </head>
 <body>
 
+    <!-- PAGE 1: SILVER THEME -->
     <div class="page silver-page">
         <div class="border-box">
             
+            <!-- Top Section -->
             <div>
-                <p class="text-md bold text-black mt-2">A Project On</p>
+                <p class="text-md bold text-black">A Project On</p>
                 <h1 class="text-xl bold italic uppercase text-black">RAKSHA-SURAKSHA</h1>
-                <p class="text-lg text-black mb-4">An Autonomous 3-Tier Tactical System</p>
+                <p class="text-lg text-black">An Autonomous 3-Tier Tactical System</p>
             </div>
 
+            <!-- Degree Section -->
             <div>
                 <p class="text-sm bold text-black">A report Submitted in partial fulfilment as per the requirements of</p>
                 <p class="text-md bold text-black">Bangalore University</p>
@@ -100,10 +103,12 @@
                 <p class="text-md bold italic text-black">Bachelor of Computer Applications (B.C.A)</p>
             </div>
 
+            <!-- Middle Logo -->
             <div>
                 <img src="Ulogo.jpeg" alt="Bangalore University Logo" class="logo-mid">
             </div>
 
+            <!-- Student Info -->
             <div>
                 <p class="text-sm text-black">Submitted by</p>
                 <div class="student-list text-black">
@@ -114,31 +119,36 @@
                 </div>
             </div>
 
+            <!-- Guide Info -->
             <div>
-                <p class="text-sm text-black mt-2">Under the Guidance of</p>
-                <p class="text-md bold italic text-black mt-1">JERIN VARGHESE</p>
+                <p class="text-sm text-black">Under the Guidance of</p>
+                <p class="text-md bold italic text-black">JERIN VARGHESE</p>
                 <p class="text-sm italic text-black">Assistant Professor</p>
             </div>
 
+            <!-- Institute Info -->
             <div>
                 <img src="Hlogo.jpeg" alt="Harsha Institute Logo" class="logo-bottom">
                 <p class="text-md bold italic text-black mb-2">Harasha Institute Of Management Studies</p>
                 <p class="text-xs italic text-black">No. 129/47/1 to 7, Vardanayakanahalli Village, Jakkanahalli Post,</p>
-                <p class="text-xs italic text-black mb-3">Nelamangala, Bangalore - 562123, Karnataka.</p>
+                <p class="text-xs italic text-black mb-3">Nelamangala, Bangalore-562123, Karnataka.</p>
                 <p class="text-sm bold italic text-black">Batch 2023-2026</p>
             </div>
         </div>
     </div>
 
+    <!-- PAGE 2: STANDARD / COLORED THEME -->
     <div class="page">
         <div class="border-box">
             
+            <!-- Top Section -->
             <div>
-                <p class="text-md bold text-black mt-2">A Project On</p>
+                <p class="text-md bold text-black">A Project On</p>
                 <h1 class="text-xl bold italic uppercase text-black">RAKSHA-SURAKSHA</h1>
-                <p class="text-lg text-black mb-4">An Autonomous 3-Tier Tactical System</p>
+                <p class="text-lg text-black">An Autonomous 3-Tier Tactical System</p>
             </div>
 
+            <!-- Degree Section -->
             <div>
                 <p class="text-sm bold text-black">A report Submitted in partial fulfilment as per the requirements of</p>
                 <p class="text-md bold text-black">Bangalore University</p>
@@ -146,10 +156,12 @@
                 <p class="text-md bold italic text-black">Bachelor of Computer Applications (B.C.A)</p>
             </div>
 
+            <!-- Middle Logo -->
             <div>
                 <img src="Ulogo.jpeg" alt="Bangalore University Logo" class="logo-mid">
             </div>
 
+            <!-- Student Info -->
             <div>
                 <p class="text-sm text-black">Submitted by</p>
                 <div class="student-list text-black">
@@ -160,17 +172,19 @@
                 </div>
             </div>
 
+            <!-- Guide Info -->
             <div>
-                <p class="text-sm text-black mt-2">Under the Guidance of</p>
-                <p class="text-md bold italic text-black mt-1">JERIN VARGHESE</p>
+                <p class="text-sm text-black">Under the Guidance of</p>
+                <p class="text-md bold italic text-black">JERIN VARGHESE</p>
                 <p class="text-sm italic text-black">Assistant Professor</p>
             </div>
 
+            <!-- Institute Info -->
             <div>
                 <img src="Hlogo.jpeg" alt="Harsha Institute Logo" class="logo-bottom">
                 <p class="text-md bold italic text-black mb-2">Harasha Institute Of Management Studies</p>
                 <p class="text-xs italic text-black">No. 129/47/1 to 7, Vardanayakanahalli Village, Jakkanahalli Post,</p>
-                <p class="text-xs italic text-black mb-3">Nelamangala, Bangalore - 562123, Karnataka.</p>
+                <p class="text-xs italic text-black mb-3">Nelamangala, Bangalore-562123, Karnataka.</p>
                 <p class="text-sm bold italic text-black">Batch 2023-2026</p>
             </div>
         </div>
