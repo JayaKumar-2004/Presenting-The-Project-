@@ -33,11 +33,11 @@
         border: 8px solid #000; 
         width: 100%;
         height: 100%;
-        padding: 35px 25px; 
+        padding: 40px 30px; /* Increased internal padding for better spacing rhythm */
         text-align: center;
         display: flex;
         flex-direction: column;
-        justify-content: space-between; 
+        justify-content: space-between; /* Mathematically perfect gaps between sections */
     }
 
     /* Base Typography */
@@ -46,26 +46,20 @@
     .text-sm { font-size: 15px; line-height: 1.4; margin-bottom: 4px; }
     .text-md { font-size: 17px; margin-bottom: 5px; }
     .text-lg { font-size: 19px; margin-bottom: 5px; }
-    .text-xl { font-size: 28px; margin: 10px 0 12px 0; letter-spacing: 0.5px; }
+    .text-xl { font-size: 28px; margin: 8px 0 10px 0; letter-spacing: 0.5px; }
 
     .bold { font-weight: bold; }
     .italic { font-style: italic; }
     .uppercase { text-transform: uppercase; }
 
-    /* Spacing utilities */
-    .mb-2 { margin-bottom: 8px; }
-    .mb-3 { margin-bottom: 15px; }
-    .mt-1 { margin-top: 5px; }
-    .mt-4 { margin-top: 25px; } /* Added for the gap above Batch */
-
     /* Custom Elements */
     .student-list { margin: 8px 0; line-height: 1.6; }
-    .student-list p { font-size: 15px; font-weight: bold; margin-bottom: 3px; }
+    .student-list p { font-size: 15px; font-weight: bold; margin-bottom: 2px; }
     
-    .logo-mid { width: 115px; height: auto; margin: 5px auto; display: block; }
+    .logo-mid { width: 110px; height: auto; margin: 0 auto; display: block; }
     
     /* Enlarged Harsha Logo */
-    .logo-bottom { width: 135px; height: auto; margin: 0 auto 8px auto; display: block; }
+    .logo-bottom { width: 130px; height: auto; margin: 0 auto 10px auto; display: block; }
 
     /* --- HARDBOUND BLUE COVER (Outer cover, no binding gap, perfectly centered) --- */
     .hardbound-cover { 
@@ -113,14 +107,14 @@
     <div class="page hardbound-cover">
         <div class="border-box">
             
-            <!-- Top Section -->
+            <!-- Block 1: Top Section -->
             <div>
                 <p class="text-md bold text-black">A Project On</p>
                 <h1 class="text-xl bold italic uppercase text-black">RAKSHA-SURAKSHA</h1>
                 <p class="text-lg text-black">An Autonomous 3-Tier Tactical System</p>
             </div>
 
-            <!-- Degree Section -->
+            <!-- Block 2: Degree Section -->
             <div>
                 <p class="text-sm bold text-black">A report Submitted in partial fulfilment as per the requirements of</p>
                 <p class="text-md bold text-black">Bangalore University</p>
@@ -128,12 +122,12 @@
                 <p class="text-md bold italic text-black">Bachelor of Computer Applications (B.C.A)</p>
             </div>
 
-            <!-- Middle Logo -->
+            <!-- Block 3: Middle Logo -->
             <div>
                 <img src="Ulogo.jpeg" alt="Bangalore University Logo" class="logo-mid">
             </div>
 
-            <!-- Student Info -->
+            <!-- Block 4: Student Info -->
             <div>
                 <p class="text-sm text-black">Submitted by</p>
                 <div class="student-list text-black">
@@ -144,22 +138,26 @@
                 </div>
             </div>
 
-            <!-- Guide Info -->
+            <!-- Block 5: Guide Info -->
             <div>
                 <p class="text-sm text-black">Under the Guidance of</p>
-                <p class="text-md bold italic text-black mt-1">JERIN VARGHESE</p>
+                <p class="text-md bold italic text-black" style="margin-top: 4px;">JERIN VARGHESE</p>
                 <p class="text-sm italic text-black">Assistant Professor</p>
             </div>
 
-            <!-- Institute Info -->
+            <!-- Block 6: Institute Info -->
             <div>
                 <img src="Hlogo.jpeg" alt="Harsha Institute Logo" class="logo-bottom">
-                <p class="text-md bold italic uppercase text-black mb-2">HARASHA INSTITUTE OF MANAGEMENT STUDIES</p>
+                <p class="text-md bold italic uppercase text-black" style="margin-bottom: 8px;">HARASHA INSTITUTE OF MANAGEMENT STUDIES</p>
                 <p class="text-xs italic text-black">No. 129/47/1 to 7, Vardanayakanahalli Village, Jakkanahalli Post,</p>
                 <p class="text-xs italic text-black">Nelamangala, Bangalore-562123, Karnataka.</p>
-                <!-- Added mt-4 to push this section down -->
-                <p class="text-sm bold italic text-black mt-4">Batch 2023-2026</p>
             </div>
+
+            <!-- Block 7: Batch Section (Isolated to guarantee a gap) -->
+            <div style="margin-top: 15px;">
+                <p class="text-sm bold italic text-black">Batch 2023-2026</p>
+            </div>
+
         </div>
     </div>
 
@@ -167,14 +165,14 @@
     <div class="page">
         <div class="border-box">
             
-            <!-- Top Section -->
+            <!-- Block 1: Top Section -->
             <div>
                 <p class="text-md bold text-black">A Project On</p>
                 <h1 class="text-xl bold italic uppercase text-black">RAKSHA-SURAKSHA</h1>
                 <p class="text-lg text-black">An Autonomous 3-Tier Tactical System</p>
             </div>
 
-            <!-- Degree Section -->
+            <!-- Block 2: Degree Section -->
             <div>
                 <p class="text-sm bold text-black">A report Submitted in partial fulfilment as per the requirements of</p>
                 <p class="text-md bold text-black">Bangalore University</p>
@@ -182,12 +180,12 @@
                 <p class="text-md bold italic text-black">Bachelor of Computer Applications (B.C.A)</p>
             </div>
 
-            <!-- Middle Logo -->
+            <!-- Block 3: Middle Logo -->
             <div>
                 <img src="Ulogo.jpeg" alt="Bangalore University Logo" class="logo-mid">
             </div>
 
-            <!-- Student Info -->
+            <!-- Block 4: Student Info -->
             <div>
                 <p class="text-sm text-black">Submitted by</p>
                 <div class="student-list text-black">
@@ -198,22 +196,26 @@
                 </div>
             </div>
 
-            <!-- Guide Info -->
+            <!-- Block 5: Guide Info -->
             <div>
                 <p class="text-sm text-black">Under the Guidance of</p>
-                <p class="text-md bold italic text-black mt-1">JERIN VARGHESE</p>
+                <p class="text-md bold italic text-black" style="margin-top: 4px;">JERIN VARGHESE</p>
                 <p class="text-sm italic text-black">Assistant Professor</p>
             </div>
 
-            <!-- Institute Info -->
+            <!-- Block 6: Institute Info -->
             <div>
                 <img src="Hlogo.jpeg" alt="Harsha Institute Logo" class="logo-bottom">
-                <p class="text-md bold italic uppercase text-black mb-2">HARASHA INSTITUTE OF MANAGEMENT STUDIES</p>
+                <p class="text-md bold italic uppercase text-black" style="margin-bottom: 8px;">HARASHA INSTITUTE OF MANAGEMENT STUDIES</p>
                 <p class="text-xs italic text-black">No. 129/47/1 to 7, Vardanayakanahalli Village, Jakkanahalli Post,</p>
                 <p class="text-xs italic text-black">Nelamangala, Bangalore-562123, Karnataka.</p>
-                <!-- Added mt-4 to push this section down -->
-                <p class="text-sm bold italic text-black mt-4">Batch 2023-2026</p>
             </div>
+
+            <!-- Block 7: Batch Section (Isolated to guarantee a gap) -->
+            <div style="margin-top: 15px;">
+                <p class="text-sm bold italic text-black">Batch 2023-2026</p>
+            </div>
+
         </div>
     </div>
 
