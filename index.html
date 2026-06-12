@@ -23,9 +23,10 @@
     .page {
         background-color: white;
         width: 210mm;
-        min-height: 297mm;
-        padding: 20mm;
+        height: 297mm; /* Strictly set to A4 height */
+        padding: 15mm; /* Reduced slightly to give border room */
         box-shadow: 0 0 10px rgba(0, 0, 0, 0.15);
+        position: relative;
     }
 
     /* The main border box */
@@ -33,7 +34,7 @@
         border: 2px solid #000;
         width: 100%;
         height: 100%;
-        padding: 40px 30px;
+        padding: 30px 20px; /* Adjusted padding to ensure fit */
         text-align: center;
         display: flex;
         flex-direction: column;
@@ -45,7 +46,7 @@
         font-size: 10px;
         text-transform: uppercase;
         color: #333;
-        margin-bottom: 8px;
+        margin-bottom: 5px;
     }
 
     .main-title {
@@ -53,7 +54,7 @@
         font-weight: bold;
         text-transform: uppercase;
         color: #000;
-        margin-bottom: 15px;
+        margin-bottom: 10px;
     }
 
     .normal-text {
@@ -78,11 +79,11 @@
     .course-text {
         font-weight: bold;
         font-size: 13px;
-        margin-bottom: 20px;
+        margin-bottom: 10px;
     }
 
     .section-gap {
-        margin-top: 15px;
+        margin-top: 10px;
         margin-bottom: 5px;
     }
     
@@ -95,24 +96,46 @@
     .batch-text {
         font-weight: bold;
         font-size: 11px;
-        margin-top: 10px;
+        margin-top: 8px;
     }
 
     /* Image styling */
     .logo-img {
         width: 60px;
         height: auto;
-        margin: 15px auto;
+        margin: 10px auto;
         display: block;
     }
     
     .small-logo-img {
         width: 45px;
         height: auto;
-        margin: 10px auto;
+        margin: 5px auto;
         display: block;
     }
 
+    /* --- PRINT FIXES --- */
+    @media print {
+        @page {
+            size: A4;
+            margin: 0; /* Strips browser default print margins */
+        }
+        body {
+            background-color: white;
+            padding: 0;
+            margin: 0;
+            display: block;
+        }
+        .page {
+            box-shadow: none; /* Remove shadow when printing */
+            width: 210mm;
+            height: 297mm;
+            padding: 15mm;
+            margin: 0;
+            page-break-after: avoid;
+            page-break-inside: avoid;
+        }
+    }
 </style>
 </head>
 <body>
@@ -120,22 +143,27 @@
     <div class="page">
         <div class="border-box">
             
+            <!-- Top Section: Titles -->
             <div>
                 <p class="small-text">A MAJOR PROJECT ON</p>
                 <h1 class="main-title">RAKSHA-SURAKSHA</h1>
                 
+                <!-- Top Logo -->
                 <img src="Ulogo.jpeg" alt="Top Logo" class="logo-img">
             </div>
 
+            <!-- Middle Section: Degree Info -->
             <div>
                 <p class="normal-text">A report submitted in partial fulfillment of the requirements for the award of the</p>
                 <p class="normal-text">Degree of</p>
                 <p class="degree-text">BACHELOR OF COMPUTER APPLICATIONS</p>
                 <p class="course-text">COMPUTER APPLICATION DEPARTMENT</p>
                 
+                <!-- Middle Logo -->
                 <img src="Ulogo.jpeg" alt="University Logo" class="logo-img">
             </div>
 
+            <!-- Bottom-Middle Section: Student & Guide Info -->
             <div>
                 <p class="normal-text section-gap">Submitted by</p>
                 <p class="bold-text">ABHISHEK</p>
@@ -146,7 +174,9 @@
                 <p class="normal-text">Assistant Professor</p>
             </div>
 
+            <!-- Bottom Section: Institute Info -->
             <div>
+                <!-- Bottom Logo -->
                 <img src="Hlogo.jpeg" alt="Harsha Institute Logo" class="small-logo-img">
                 
                 <p class="bold-text" style="font-size: 13px;">HARSHA INSTITUTE OF MANAGEMENT STUDIES</p>
