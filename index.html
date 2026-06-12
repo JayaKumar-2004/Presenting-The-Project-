@@ -34,10 +34,11 @@
         width: 100%;
         height: 100%;
         padding: 40px 30px; /* Internal padding for better spacing rhythm */
-        text-align: center;
+        text-align: center; /* Enforces strict center alignment for all text */
         display: flex;
         flex-direction: column;
         justify-content: space-between; /* Mathematically perfect gaps between sections */
+        align-items: center; /* Enforces strict center alignment for all flex items */
     }
 
     /* Base Typography */
@@ -47,13 +48,14 @@
     .text-md { font-size: 17px; margin-bottom: 5px; }
     .text-lg { font-size: 19px; margin-bottom: 5px; }
     .text-xl { font-size: 28px; margin: 8px 0 10px 0; letter-spacing: 0.5px; }
+    .text-batch { font-size: 21px; } /* Newly added larger font for batch */
 
     .bold { font-weight: bold; }
     .italic { font-style: italic; }
     .uppercase { text-transform: uppercase; }
 
     /* Custom Elements */
-    .student-list { margin: 8px 0; line-height: 1.6; }
+    .student-list { margin: 8px 0; line-height: 1.6; text-align: center; }
     .student-list p { font-size: 15px; font-weight: bold; margin-bottom: 2px; }
     
     .logo-mid { width: 110px; height: auto; margin: 0 auto; display: block; }
@@ -108,14 +110,14 @@
         <div class="border-box">
             
             <!-- Block 1: Top Section -->
-            <div>
+            <div style="width: 100%; text-align: center;">
                 <p class="text-md bold text-black">A Project On</p>
                 <h1 class="text-xl bold italic uppercase text-black">RAKSHA-SURAKSHA</h1>
                 <p class="text-lg text-black">An Autonomous 3-Tier Tactical System</p>
             </div>
 
             <!-- Block 2: Degree Section -->
-            <div>
+            <div style="width: 100%; text-align: center;">
                 <p class="text-sm bold text-black">A report Submitted in partial fulfilment as per the requirements of</p>
                 <p class="text-md bold text-black">Bangalore University</p>
                 <p class="text-sm bold text-black">for</p>
@@ -123,12 +125,12 @@
             </div>
 
             <!-- Block 3: Middle Logo -->
-            <div>
+            <div style="width: 100%; text-align: center;">
                 <img src="Ulogo.jpeg" alt="Bangalore University Logo" class="logo-mid">
             </div>
 
             <!-- Block 4: Student Info -->
-            <div>
+            <div style="width: 100%; text-align: center;">
                 <p class="text-sm text-black">Submitted by</p>
                 <div class="student-list text-black">
                     <p>SURYAKANT CHAUDHARY (U03EC23S0151)</p>
@@ -139,24 +141,23 @@
             </div>
 
             <!-- Block 5: Guide Info -->
-            <div>
+            <div style="width: 100%; text-align: center;">
                 <p class="text-sm text-black">Under the Guidance of</p>
-                <!-- Added a larger margin-top here for the requested gap -->
                 <p class="text-md bold italic text-black" style="margin-top: 12px;">JERIN VARGHESE</p>
                 <p class="text-sm italic text-black">Assistant Professor</p>
             </div>
 
             <!-- Block 6: Institute Info -->
-            <div>
+            <div style="width: 100%; text-align: center;">
                 <img src="Hlogo.jpeg" alt="Harsha Institute Logo" class="logo-bottom">
                 <p class="text-md bold italic uppercase text-black" style="margin-bottom: 8px;">HARASHA INSTITUTE OF MANAGEMENT STUDIES</p>
                 <p class="text-xs italic text-black">No. 129/47/1 to 7, Vardanayakanahalli Village, Jakkanahalli Post,</p>
                 <p class="text-xs italic text-black">Nelamangala, Bangalore-562123, Karnataka.</p>
             </div>
 
-            <!-- Block 7: Batch Section (Isolated to guarantee a gap) -->
-            <div style="margin-top: 15px;">
-                <p class="text-sm bold italic text-black">Batch 2023-2026</p>
+            <!-- Block 7: Batch Section -->
+            <div style="margin-top: 15px; width: 100%; text-align: center;">
+                <p class="text-batch bold italic text-black">Batch 2023-2026</p>
             </div>
 
         </div>
@@ -167,14 +168,14 @@
         <div class="border-box">
             
             <!-- Block 1: Top Section -->
-            <div>
+            <div style="width: 100%; text-align: center;">
                 <p class="text-md bold text-black">A Project On</p>
                 <h1 class="text-xl bold italic uppercase text-black">RAKSHA-SURAKSHA</h1>
                 <p class="text-lg text-black">An Autonomous 3-Tier Tactical System</p>
             </div>
 
             <!-- Block 2: Degree Section -->
-            <div>
+            <div style="width: 100%; text-align: center;">
                 <p class="text-sm bold text-black">A report Submitted in partial fulfilment as per the requirements of</p>
                 <p class="text-md bold text-black">Bangalore University</p>
                 <p class="text-sm bold text-black">for</p>
@@ -182,12 +183,12 @@
             </div>
 
             <!-- Block 3: Middle Logo -->
-            <div>
+            <div style="width: 100%; text-align: center;">
                 <img src="Ulogo.jpeg" alt="Bangalore University Logo" class="logo-mid">
             </div>
 
             <!-- Block 4: Student Info -->
-            <div>
+            <div style="width: 100%; text-align: center;">
                 <p class="text-sm text-black">Submitted by</p>
                 <div class="student-list text-black">
                     <p>SURYAKANT CHAUDHARY (U03EC23S0151)</p>
@@ -198,24 +199,23 @@
             </div>
 
             <!-- Block 5: Guide Info -->
-            <div>
+            <div style="width: 100%; text-align: center;">
                 <p class="text-sm text-black">Under the Guidance of</p>
-                <!-- Added a larger margin-top here for the requested gap -->
                 <p class="text-md bold italic text-black" style="margin-top: 12px;">JERIN VARGHESE</p>
                 <p class="text-sm italic text-black">Assistant Professor</p>
             </div>
 
             <!-- Block 6: Institute Info -->
-            <div>
+            <div style="width: 100%; text-align: center;">
                 <img src="Hlogo.jpeg" alt="Harsha Institute Logo" class="logo-bottom">
                 <p class="text-md bold italic uppercase text-black" style="margin-bottom: 8px;">HARASHA INSTITUTE OF MANAGEMENT STUDIES</p>
                 <p class="text-xs italic text-black">No. 129/47/1 to 7, Vardanayakanahalli Village, Jakkanahalli Post,</p>
                 <p class="text-xs italic text-black">Nelamangala, Bangalore-562123, Karnataka.</p>
             </div>
 
-            <!-- Block 7: Batch Section (Isolated to guarantee a gap) -->
-            <div style="margin-top: 15px;">
-                <p class="text-sm bold italic text-black">Batch 2023-2026</p>
+            <!-- Block 7: Batch Section -->
+            <div style="margin-top: 15px; width: 100%; text-align: center;">
+                <p class="text-batch bold italic text-black">Batch 2023-2026</p>
             </div>
 
         </div>
