@@ -17,19 +17,18 @@
         gap: 40px; 
     }
 
-    /* Page styles */
+    /* Page styles - Default for inner pages (includes binding gap) */
     .page {
         background-color: white;
         width: 210mm;
         height: 297mm;
-        /* PERFECT CENTERING: Equal 20mm padding on all sides */
-        padding: 20mm; 
+        padding: 20mm 15mm 20mm 30mm; /* 30mm left margin for the binding spine */
         box-shadow: 0 5px 15px rgba(0, 0, 0, 0.4);
         position: relative;
         page-break-after: always;
     }
 
-    /* Standard Thick border for the printed white page */
+    /* Standard Thick border */
     .border-box {
         border: 8px solid #000; 
         width: 100%;
@@ -58,12 +57,15 @@
     .student-list p { font-size: 14px; font-weight: bold; margin-bottom: 2px; }
     
     .logo-mid { width: 100px; height: auto; margin: 5px auto; display: block; }
-    .logo-bottom { width: 85px; height: auto; margin: 0 auto 5px auto; display: block; }
+    
+    /* Expanded Harsha Logo Size */
+    .logo-bottom { width: 105px; height: auto; margin: 0 auto 5px auto; display: block; }
 
-    /* --- HARDBOUND BLUE COVER (TRIAL) --- */
+    /* --- HARDBOUND BLUE COVER (Outer cover, no binding gap, perfectly centered) --- */
     .hardbound-cover { 
         background-color: #1a235a; /* Deep navy blue background */
         color: #e0e0e0; /* Bright silver text */
+        padding: 20mm; /* Overrides the binding padding for perfect centering */
         -webkit-print-color-adjust: exact; 
         print-color-adjust: exact;
     } 
@@ -90,26 +92,26 @@
             box-shadow: none;
             width: 210mm;
             height: 297mm;
-            padding: 20mm; /* Keep it perfectly centered when printing */
+            padding: 20mm 15mm 20mm 30mm; /* Keep inner binding gap when printing */
             margin: 0;
+        }
+        .hardbound-cover {
+            padding: 20mm; /* Keep outer cover perfectly centered when printing */
         }
     }
 </style>
 </head>
 <body>
 
-    <!-- PAGE 1: HARDBOUND BLUE & SILVER TRIAL -->
     <div class="page hardbound-cover">
         <div class="border-box">
             
-            <!-- Top Section -->
             <div>
                 <p class="text-md bold text-black">A Project On</p>
                 <h1 class="text-xl bold italic uppercase text-black">RAKSHA-SURAKSHA</h1>
                 <p class="text-lg text-black">An Autonomous 3-Tier Tactical System</p>
             </div>
 
-            <!-- Degree Section -->
             <div>
                 <p class="text-sm bold text-black">A report Submitted in partial fulfilment as per the requirements of</p>
                 <p class="text-md bold text-black">Bangalore University</p>
@@ -117,12 +119,10 @@
                 <p class="text-md bold italic text-black">Bachelor of Computer Applications (B.C.A)</p>
             </div>
 
-            <!-- Middle Logo -->
             <div>
                 <img src="Ulogo.jpeg" alt="Bangalore University Logo" class="logo-mid">
             </div>
 
-            <!-- Student Info -->
             <div>
                 <p class="text-sm text-black">Submitted by</p>
                 <div class="student-list text-black">
@@ -133,14 +133,12 @@
                 </div>
             </div>
 
-            <!-- Guide Info -->
             <div>
                 <p class="text-sm text-black">Under the Guidance of</p>
                 <p class="text-md bold italic text-black">JERIN VARGHESE</p>
                 <p class="text-sm italic text-black">Assistant Professor</p>
             </div>
 
-            <!-- Institute Info -->
             <div>
                 <img src="Hlogo.jpeg" alt="Harsha Institute Logo" class="logo-bottom">
                 <p class="text-md bold italic text-black mb-2">Harasha Institute Of Management Studies</p>
@@ -151,18 +149,15 @@
         </div>
     </div>
 
-    <!-- PAGE 2: STANDARD / COLORED THEME -->
     <div class="page">
         <div class="border-box">
             
-            <!-- Top Section -->
             <div>
                 <p class="text-md bold text-black">A Project On</p>
                 <h1 class="text-xl bold italic uppercase text-black">RAKSHA-SURAKSHA</h1>
                 <p class="text-lg text-black">An Autonomous 3-Tier Tactical System</p>
             </div>
 
-            <!-- Degree Section -->
             <div>
                 <p class="text-sm bold text-black">A report Submitted in partial fulfilment as per the requirements of</p>
                 <p class="text-md bold text-black">Bangalore University</p>
@@ -170,12 +165,10 @@
                 <p class="text-md bold italic text-black">Bachelor of Computer Applications (B.C.A)</p>
             </div>
 
-            <!-- Middle Logo -->
             <div>
                 <img src="Ulogo.jpeg" alt="Bangalore University Logo" class="logo-mid">
             </div>
 
-            <!-- Student Info -->
             <div>
                 <p class="text-sm text-black">Submitted by</p>
                 <div class="student-list text-black">
@@ -186,14 +179,12 @@
                 </div>
             </div>
 
-            <!-- Guide Info -->
             <div>
                 <p class="text-sm text-black">Under the Guidance of</p>
                 <p class="text-md bold italic text-black">JERIN VARGHESE</p>
                 <p class="text-sm italic text-black">Assistant Professor</p>
             </div>
 
-            <!-- Institute Info -->
             <div>
                 <img src="Hlogo.jpeg" alt="Harsha Institute Logo" class="logo-bottom">
                 <p class="text-md bold italic text-black mb-2">Harasha Institute Of Management Studies</p>
