@@ -23,12 +23,12 @@
         width: 210mm;
         height: 297mm;
         padding: 20mm 15mm 20mm 30mm; /* Left side gutter margin for binding */
-        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.4);
         position: relative;
         page-break-after: always;
     }
 
-    /* Thick border with balanced internal spacing */
+    /* Standard Thick border for the printed white page */
     .border-box {
         border: 8px solid #000; 
         width: 100%;
@@ -37,11 +37,10 @@
         text-align: center;
         display: flex;
         flex-direction: column;
-        /* space-around fixes the massive gaps by distributing space evenly */
         justify-content: space-around; 
     }
 
-    /* Base Typography (Increased slightly to fill the page better) */
+    /* Base Typography */
     .text-black { color: #000; }
     .text-xs { font-size: 11px; line-height: 1.4; }
     .text-sm { font-size: 14px; line-height: 1.4; margin-bottom: 3px; }
@@ -58,14 +57,26 @@
     .student-list p { font-size: 14px; font-weight: bold; margin-bottom: 2px; }
     
     .logo-mid { width: 100px; height: auto; margin: 5px auto; display: block; }
-    .logo-bottom { width: 60px; height: auto; margin: 0 auto 5px auto; display: block; }
+    
+    /* Increased Harsha Logo Size */
+    .logo-bottom { width: 85px; height: auto; margin: 0 auto 5px auto; display: block; }
 
-    /* --- SILVER PAGE OVERRIDES --- */
-    .silver-page { color: #a0a0a0; } 
-    .silver-page .border-box { border-color: #a0a0a0; }
-    .silver-page .text-black { color: #a0a0a0; }
-    .silver-page img {
-        filter: grayscale(100%) opacity(50%) brightness(110%);
+    /* --- HARDBOUND BLUE COVER (TRIAL) --- */
+    .hardbound-cover { 
+        background-color: #1a235a; /* Deep navy blue background */
+        color: #e0e0e0; /* Bright silver text */
+        -webkit-print-color-adjust: exact; /* Forces background colors to print if needed */
+        print-color-adjust: exact;
+    } 
+    .hardbound-cover .border-box { 
+        border: 3px solid #e0e0e0; /* Thinner border for the foil stamp look */
+    }
+    .hardbound-cover .text-black { 
+        color: #e0e0e0; /* Overrides black text to silver */
+    }
+    .hardbound-cover img {
+        /* Turns any colored/black logo into a bright silver metallic color */
+        filter: brightness(0) invert(0.9);
     }
 
     /* --- PRINT FIXES --- */
@@ -84,18 +95,15 @@
 </head>
 <body>
 
-    <!-- PAGE 1: SILVER THEME -->
-    <div class="page silver-page">
+    <div class="page hardbound-cover">
         <div class="border-box">
             
-            <!-- Top Section -->
             <div>
                 <p class="text-md bold text-black">A Project On</p>
                 <h1 class="text-xl bold italic uppercase text-black">RAKSHA-SURAKSHA</h1>
                 <p class="text-lg text-black">An Autonomous 3-Tier Tactical System</p>
             </div>
 
-            <!-- Degree Section -->
             <div>
                 <p class="text-sm bold text-black">A report Submitted in partial fulfilment as per the requirements of</p>
                 <p class="text-md bold text-black">Bangalore University</p>
@@ -103,12 +111,10 @@
                 <p class="text-md bold italic text-black">Bachelor of Computer Applications (B.C.A)</p>
             </div>
 
-            <!-- Middle Logo -->
             <div>
                 <img src="Ulogo.jpeg" alt="Bangalore University Logo" class="logo-mid">
             </div>
 
-            <!-- Student Info -->
             <div>
                 <p class="text-sm text-black">Submitted by</p>
                 <div class="student-list text-black">
@@ -119,14 +125,12 @@
                 </div>
             </div>
 
-            <!-- Guide Info -->
             <div>
                 <p class="text-sm text-black">Under the Guidance of</p>
                 <p class="text-md bold italic text-black">JERIN VARGHESE</p>
                 <p class="text-sm italic text-black">Assistant Professor</p>
             </div>
 
-            <!-- Institute Info -->
             <div>
                 <img src="Hlogo.jpeg" alt="Harsha Institute Logo" class="logo-bottom">
                 <p class="text-md bold italic text-black mb-2">Harasha Institute Of Management Studies</p>
@@ -137,18 +141,15 @@
         </div>
     </div>
 
-    <!-- PAGE 2: STANDARD / COLORED THEME -->
     <div class="page">
         <div class="border-box">
             
-            <!-- Top Section -->
             <div>
                 <p class="text-md bold text-black">A Project On</p>
                 <h1 class="text-xl bold italic uppercase text-black">RAKSHA-SURAKSHA</h1>
                 <p class="text-lg text-black">An Autonomous 3-Tier Tactical System</p>
             </div>
 
-            <!-- Degree Section -->
             <div>
                 <p class="text-sm bold text-black">A report Submitted in partial fulfilment as per the requirements of</p>
                 <p class="text-md bold text-black">Bangalore University</p>
@@ -156,12 +157,10 @@
                 <p class="text-md bold italic text-black">Bachelor of Computer Applications (B.C.A)</p>
             </div>
 
-            <!-- Middle Logo -->
             <div>
                 <img src="Ulogo.jpeg" alt="Bangalore University Logo" class="logo-mid">
             </div>
 
-            <!-- Student Info -->
             <div>
                 <p class="text-sm text-black">Submitted by</p>
                 <div class="student-list text-black">
@@ -172,14 +171,12 @@
                 </div>
             </div>
 
-            <!-- Guide Info -->
             <div>
                 <p class="text-sm text-black">Under the Guidance of</p>
                 <p class="text-md bold italic text-black">JERIN VARGHESE</p>
                 <p class="text-sm italic text-black">Assistant Professor</p>
             </div>
 
-            <!-- Institute Info -->
             <div>
                 <img src="Hlogo.jpeg" alt="Harsha Institute Logo" class="logo-bottom">
                 <p class="text-md bold italic text-black mb-2">Harasha Institute Of Management Studies</p>
